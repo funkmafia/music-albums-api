@@ -23,6 +23,10 @@ An Express + MongoDB RESTful API that allows you to manage a collection of music
     •	Authentication for protected endpoints
     •	Ratings and user reviews
 
+## 🚀 Future testing
+
+- delete and put request for testing for future enhancements as get and post testing done
+
 ## Created by:
 
 - the code whisperer aka funkmafia
