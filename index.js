@@ -20,7 +20,7 @@ app.use(express.json()); // middleware
 // GET request
 app.get("/api/albums", getAllAlbums);
 app.post("/api/albums", createAlbum);
-app.update("/api/albums", updateAlbums);
+app.put("/api/albums", updateAlbums);
 app.delete("/api/albums", deleteAlbums);
 
 const PORT = process.env.PORT || 5000;
