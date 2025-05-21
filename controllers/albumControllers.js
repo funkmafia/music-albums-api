@@ -9,11 +9,11 @@ exports.getAllAlbums = async (request, response) => {
   }
 };
 
-exports.createAlbums = async (request, response) => {
+exports.createAlbum = async (request, response) => {
   try {
     const albums = new Album(request.body);
     await albums.save();
-    response.send(movie);
+    response.send(albums);
   } catch (error) {
     response.status(500).send({ error: "Failed to add album" });
   }
@@ -28,7 +28,7 @@ exports.updateAlbums = async (request, response) => {
         new: true,
       }
     );
-    response.send(Movie);
+    response.send(albums);
   } catch (error) {
     response.status(500).send({ error: "Failed to update album" });
   }

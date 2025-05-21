@@ -3,8 +3,8 @@ require("dotenv").config(); // loads environment variables from a .env file into
 const express = require("express");
 const mongoose = require("mongoose");
 const {
-  createAlbum,
   getAllAlbums,
+  createAlbum,
   updateAlbums,
   deleteAlbums,
 } = require("./controllers/albumControllers");
@@ -20,6 +20,7 @@ app.use(express.json()); // middleware
 // GET request
 app.get("/api/albums", getAllAlbums);
 app.post("/api/albums", createAlbum);
+app.update("/api/albums", updateAlbums);
 app.delete("/api/albums", deleteAlbums);
 
 const PORT = process.env.PORT || 5000;
